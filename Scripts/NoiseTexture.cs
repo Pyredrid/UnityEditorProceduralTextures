@@ -70,7 +70,7 @@ public class NoiseTexture : ScriptableObject {
 		texture.wrapModeU = wrapModeU;
 		texture.wrapModeV = wrapModeV;
 		texture.alphaIsTransparency = true;
-		texture.name = "Texture_" + name;
+		texture.name = "Noise_" + name;
 
 		if (seed == 0) {
 			seed = Random.Range(int.MinValue, int.MaxValue);
