@@ -163,8 +163,8 @@ public class MixedTexture : ScriptableObject {
 		rightAbsorbance.z = Mathf.Pow((1.0f - right.b), 2.0f) / (2.0f * right.b);
 		Vector3 mixedAbsorbance = new Vector3();
 		mixedAbsorbance.x = (leftAbsorbance.x / 3.0f) + (rightAbsorbance.x / 3.0f);
-		mixedAbsorbance.x = (leftAbsorbance.y / 3.0f) + (rightAbsorbance.y / 3.0f);
-		mixedAbsorbance.x = (leftAbsorbance.z / 3.0f) + (rightAbsorbance.z / 3.0f);
+		mixedAbsorbance.y = (leftAbsorbance.y / 3.0f) + (rightAbsorbance.y / 3.0f);
+		mixedAbsorbance.z = (leftAbsorbance.z / 3.0f) + (rightAbsorbance.z / 3.0f);
 		Color mixedColor = new Color();
 		mixedColor.r = 1.0f + mixedAbsorbance.x - Mathf.Sqrt(Mathf.Pow(mixedAbsorbance.x, 2.0f) + (2.0f * mixedAbsorbance.x));
 		mixedColor.g = 1.0f + mixedAbsorbance.y - Mathf.Sqrt(Mathf.Pow(mixedAbsorbance.y, 2.0f) + (2.0f * mixedAbsorbance.y));
